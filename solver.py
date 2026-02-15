@@ -1,1 +1,0 @@
-from KarateClub import GNN

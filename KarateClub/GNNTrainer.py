@@ -17,7 +17,7 @@ class GNN(nn.Module):
         self.conv1 = GCNConv(dataset.num_features, 4)
         self.conv2 = GCNConv(4,4)
         self.conv3 = GCNConv(4,2)
-        self.classifier = nn.Linear(2, dataset.num_classes)
+        self.fc = nn.Linear(2, dataset.num_classes)
 
     def forward(self, x, edge_index):
         h = self.conv1(x, edge_index)
@@ -26,6 +26,5 @@ class GNN(nn.Module):
         h = h.tanh()
         h = self.conv3(h, edge_index)
         h = h.tanh()
-
-        out = self.classifier(h)
+        out = self.fc(h)
         return out, h
