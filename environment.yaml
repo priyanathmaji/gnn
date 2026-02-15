@@ -1,0 +1,18 @@
+name: gnn
+channels:
+  - defaults
+  - conda-forge
+dependencies:
+  - python==3.12
+  - numpy<2
+  - pyyaml
+  - matplotlib
+  - pytest
+  - tqdm
+  - pip=25.0
+  - pip:
+    - torch
+    - torchvision
+    - networkx
+    - scipy==1.13.0
+    - torch-geometric

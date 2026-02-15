@@ -1,0 +1,2 @@
+from .GNNTrainer import GNN
+
