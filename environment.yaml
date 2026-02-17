@@ -1,4 +1,4 @@
-name: gnn
+name: gnn01
 channels:
   - defaults
   - conda-forge
@@ -10,9 +10,13 @@ dependencies:
   - pytest
   - tqdm
   - pip=25.0
+  - ipykernel #added
   - pip:
     - torch
     - torchvision
     - networkx
     - scipy==1.13.0
     - torch-geometric
+    - ogb
+    - torch-scatter #added
+    - torch-sparse #added
